@@ -20,7 +20,7 @@ if [ $(uname) == Darwin ]; then
   export CC=clang
   export CXX=clang++
   export MACOSX_DEPLOYMENT_TARGET="10.9"
-  export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
+  export CXXFLAGS="-stdlib=libc++ -D_GLIBCXX_USE_CXX11_ABI=0 $CXXFLAGS"
   export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
 fi
 
